@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stock-analyzer</title>
-  <link rel="shortcut icon" href="./assests/cash-counter.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./assests/stock.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
@@ -35,8 +35,43 @@
       </button>
 
     </form>
-    <div id="money-output" class="money-output">
-      
+    <div id="analyze-output" class="analyze-output">
+      <div class="profit-tab" id="profit-tab">
+        <img src="./assests/profit.png" >
+        <h1>😎PROFIT !😎</h1>
+        <div class="info" id="profit-info">
+          <div class="amount">
+            <h3>Profit Amount : </h3>
+            <h3 id="profitAmount"></h3>
+          </div>
+          <div class="percentage">
+            <h3>Profit Percentage : </h3>
+            <h3 id="profitPercentage"></h3>
+          </div>
+        </div>
+      </div>
+      <div class="draw-tab" id="draw-tab">
+        <img src="./assests/stock.png" >
+        <h1>😌NO LOSS ! NO PROFIT !😌</h1>
+      </div>
+      <div class="loss-tab" id="loss-tab">
+        <img src="./assests/loss.png" >
+        <h1>🥺LOSS !🥺</h1>
+        <div class="info" id="loss-info">
+          <div class="amount">
+            <h3>Loss Amount : </h3>
+            <h3 id="lossAmount"></h3>
+          </div>
+          <div class="percentage">
+            <h3>Loss Percentage : </h3>
+            <h3 id="lossPercentage"></h3>
+          </div>
+        </div>
+      </div>
+      <div class="bigLoss-tab" id="bigLoss-tab">
+        <img src="./assests/money-loss.png" >
+        <h1>😱Big Loss !😱</h1>
+      </div>
 		</div>
   </div>
 </section>
