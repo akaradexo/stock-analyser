@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock-analyzer</title>
+  <link rel="shortcut icon" href="./assests/cash-counter.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  
+</head>
+
+<body>
+<section>
+  <div class="container">
+    <h1>Stock Analyser</h1>
+    <form class="user-input">
+
+      <label for="buy">Purchase Price</label> 
+      <input name="buy" type="number" placeholder="Initially paid for stocks" id="buyAmount" required/>
+
+      <label for="quantity">Shares Bought</label>
+      <input name="quantity" type="number" placeholder="Quantity of stocks " id="quantityAmount" required/>
+
+      <label for="sold">Price Sold</label>
+      <input name="sold" type="number" placeholder="Current stocks price" id="soldAmount" required/>
+
+      <button class="button-submit-pushable" type="submit" role="button">
+        <span class="button-submit-shadow"></span>
+        <span class="button-submit-edge"></span>
+        <span class="button-submit-front text">Check!</span>
+      </button>
+
+    </form>
+    <div id="money-output" class="money-output">
+      
+		</div>
+  </div>
+</section>
+</body>
+
+<script src="./script/script.js"></script>
+</html>
