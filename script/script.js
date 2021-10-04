@@ -13,6 +13,8 @@ const profitAmount = document.getElementById("profitAmount");
 const lossAmount = document.getElementById("lossAmount");
 const profitPercentage = document.getElementById("profitPercentage");
 const lossPercentage = document.getElementById("lossPercentage");
+const quantityShare = document.getElementById("quantityShare");
+
 //functions
 
 //1
@@ -29,8 +31,8 @@ else{
 //2
 const checkProfitLoss = function(buy,sold){
   if(buy < sold){
-    let profitAmount = sold-buy
-    let profitPercentage = Math.floor(((sold-buy )/ buy) *100)
+    let profitAmount = (sold-buy)*quantityAmount.value
+    let profitPercentage = Math.floor((profitAmount/ buy) *100)
     profitTab.style.display="block";
     drawTab.style.display="none";
     lossTab.style.display="none";
@@ -46,8 +48,8 @@ const checkProfitLoss = function(buy,sold){
     console.log("draw");
   }
   else if(buy > sold){
-    let lossAmount = buy - sold
-    let lossPercentage = Math.floor(((buy-sold) / sold) *100)
+    let lossAmount = (sold-buy)*quantityAmount.value
+    let lossPercentage = Math.floor((lossAmount / sold) *100)
     if(lossPercentage < 50){
     profitTab.style.display="none";
     drawTab.style.display="none";
@@ -72,11 +74,14 @@ const checkProfitLoss = function(buy,sold){
 const profitResult = function(amount,percentage){
   profitAmount.innerText = "₹"+amount;
   profitPercentage.innerText = percentage+"%";
+  quantityShare.innerText = quantityAmount.value;
 }
 const lossResult = function(amount,percentage){
   lossAmount.innerText = "₹"+amount;
   lossPercentage.innerText = percentage+"%";
+  quantityShare.innerText = quantityAmount.value;
 }
+
 
 //add event listeners
 

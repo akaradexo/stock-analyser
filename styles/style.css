@@ -173,6 +173,13 @@ section{
   align-items: center;
 }
 
+.info .quantity{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 /* button-submit */
 .button-submit-pushable {
